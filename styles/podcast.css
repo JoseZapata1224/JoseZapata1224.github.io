@@ -118,19 +118,19 @@ header {
         flex-wrap: wrap;
         justify-content: center;
         width: 100vw;
-        clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+        clip-path: polygon(0% 12%, 100% 0%, 100% 88%, 0% 100%);
         background-image: linear-gradient(to bottom, #0000FF, #0000A3);
 
     }
 
     .iframe-section {
         width: 100vw;
-        height: 90vh;
+        height: 1043px;
     }
 
     .iframe-title {
         width: 100vw;
-        margin: 140px 0px 20px 170px;
+        padding: 200px 0px 20px 140px;
         font-family: 'IBM Plex Sans', sans-serif;
         color: white;
         font-size: 48px;
@@ -155,38 +155,139 @@ header {
     }
 
     .donde-container {
-        width: 100vw;
-        height: 100vh;
+        margin: auto;
+        width: 80vw;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .donde-img {
         height: 599px;
         width: 400px;
-        margin: -75px 0px 0px 250px;
+        margin: -150px auto 0px;
         z-index: 1;
     }
 
     .donde-aside-container {
         font-family: 'IBM Plex Sans', sans-serif;
         width: 40vw;
-        height: 60vh;
+        height: 545px;
     }
 
     .donde-title {
-        margin-top: 100px;
+        width: 40vw;
         text-align: left;
         font-size: 48px;
         font-weight: 300;
+        margin-right: 50px;
     }
 
     .donde-p {
-        height: 30%;
+        height: 204px;
+        width: 70%;
         text-align: left;
         font-size: 16px;
         font-family: 'IBM Plex Mono', monospace;
         margin-top: 25px;
+        margin-right: 50px;
+        
     }
+
+    .inv-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+    }
+
+    .inv-title {
+        width: 100vw;
+        font-size: 48px;
+        color: #060A24;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 300;
+        padding: 10px 0px 30px 120px;
+    }
+
+    .inv-items {
+        width: 33.3%;
+    }
+
+    .temas-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .temas-title {
+        font-size: 48px;
+        color: #060A24;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 300;
+        width: 100vw;
+        padding: 50px 0px 50px 120px;
+        flex-shrink: 1;
+    }
+
+    img .temas-items {
+        width: 110px;
+    }
+
+
+    .temas-subtitle {
+        font-size: 24px;
+        color: #060A24;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: bold;
+        padding: 20px 0px 20px 0px;
+        text-align: center;
+    }
+
+    .icon-text-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        justify-content: space-evenly;
+        flex-shrink: 1;
+    }
+
+    .icon-text {
+        width: 25vw;
+        text-align: center;
+    }
+
+    .novedades-container {
+        display: flex;
+        width: 100vw;
+        flex-direction: column;
+        clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+        background-image: linear-gradient(to right, #0000A3, #0000FF);
+        height: 450px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .novedades-title {
+        width: 80vw;
+        font-size: 48px;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 400;
+        color: white;
+        padding-bottom: 25px;
+        text-align: center;
+    }
+
+    .novedades-button {
+        width: 345px;
+        height: 56px;
+        font-size: 18px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 500;
+        color: #060A24;
+        background-color: #00F3BB;
+        border: none;
+    }
+
+
 
 
     @media screen and (max-width: 800px) {
@@ -204,9 +305,43 @@ header {
         }
 
         .iframe-title {
-            margin: 100px auto 20px auto;
+            padding: 150px 0px 20px 100px;
+        }
+
+        .iframe-section {
+            height: 950px;
+        }
+
+        .donde-p {
+            width: auto;
+            margin: 15px auto;
+        }
+
+        .inv-title {
+            font-size: 36px;
+            padding: 0px 0px 30px 100px;
+        }
+
+        .temas-title {
+            font-size: 36px;
+            padding: 50px 0px 50px 100px;
+        }
+
+        .novedades-container {
+            margin-top: 15px;
+        }
+
+        .novedades-title {
+            font-size: 36px;
             text-align: center;
         }
+
+        .novedades-button {
+            width: 288px;
+            height: 48px;
+            font-size: 16px;
+        }
+
     }
 
     @media screen and (max-width: 614px) {
@@ -215,7 +350,7 @@ header {
         }
         
         header {
-            width: 100%;
+            width: 100vw;
             background-color: #0000A3;
         }
     
@@ -320,16 +455,61 @@ header {
 
         .iframe-section {
             width: 100vw;
-            height: 1300px;
+            height: 1350px;
         }
 
         .iframe-title {
             font-size: 40px;
-            margin-left: 0;
+            padding: 100px 0px 20px 40px;
         }
 
         .iframe-item {
             width: 80vw;
+        }
+
+        .donde-container {
+            justify-content: flex-start;
+            height: 800px;
+        }
+
+        .donde-img {
+            margin: -120px auto 0px;
+            width: auto;
+        }
+
+        .donde-title {
+            font-size: 36px;
+        }
+
+        .donde-p {
+            width: 80vw;
+            justify-content: flex-start;
+            font-size: 14px;
+        }
+
+        .inv-title {
+            padding: 0px 0px 10px 40px;
+        }
+
+        .icon-text-container {
+            flex-direction: column;
+            width: 100vw;
+            align-content: center;
+            justify-content: space-evenly;
+            height: 1000px;
+        }
+
+        .icon-text {
+            width: 50vw;
+        }
+
+        .temas-title {
+            padding: 30px 0px 0px 40px;
+        }
+
+        .temas-subtitle {
+
+            font-size: 24px;
         }
     }
 
@@ -342,7 +522,7 @@ header {
     
         .main-section {
             width: 100vw;
-            height: 45vh;
+            height: 320px;
             padding-left: 50px;
             padding-top: 50px;
         }
@@ -368,7 +548,6 @@ header {
             width: 150px;
             height: 40px;
             font-size: 15px;
-            margin-left: 25px;
         }
 
         .iframe-section-container {
@@ -381,8 +560,28 @@ header {
         }
 
         .iframe-title {
-            margin: 40px auto;
+            padding: 50px 0px 10px 40px;
             font-size: 35px;
+        }
+
+        .donde-container {
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 720px;
+        }   
+
+        .donde-title {
+            width: 250px;
+        }
+
+        .donde-img {
+            width: 250px;
+            height: 400px;
+            margin: -70px auto 10px;
+        }
+
+        .novedades-container {
+            height: 380px;
         }
     }
 
