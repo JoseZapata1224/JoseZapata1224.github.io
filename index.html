@@ -19,23 +19,28 @@
     <header>
         <img src="./assets/logo.svg" alt="" class="icono">
         <nav class="nav-container">
-            <ul class="list">
-                <li class="list-items">EPISODIOS</li>
-                <li class="list-items">NOSOTROS</li>
-                <li class="list-items">ENTREVISTAS</li>
-                <li class="list-items">TÓPICOS</li>
-            </ul>
-            <img class="responsive-img" src="./assets/icon4.svg" alt="">
-            <i class="menu-ico-bars fas fa-bars"></i>
-            <div class="menu-ico">
-                <ul class="responsive-ul">
-                    <li class="responsive-ul-items">EPISODIOS</li>
-                    <li class="responsive-ul-items">NOSOTROS</li>
-                    <li class="responsive-ul-items">ENTREVISTAS</li>
-                    <li class="responsive-ul-items">TÓPICOS</li>
-                </ul>
-            </div>
+        <ul class="list-container">
+            <li class="list">
+                <a class="list-items" href="#episodios">EPISODIOS</a>
+                <a class="list-items" href="#nosotros">NOSOTROS</a>
+                <a class="list-items" href="#entrevistas">ENTREVISTAS</a>
+                <a class="list-items" href="#topicos">TÓPICOS</a>
+            </li>
+        </ul>
+            
         </nav>
+        <div class="menu-ico">
+            <input type="checkbox" id="menu-check">
+            <label for="menu-check"><i class="menu-ico-bars fas fa-bars"></i><i class="menu-ico-bars fas fa-times"></i></label>
+            <ul class="list-container-responsive">
+            <li class="responsive-ul">
+                <a class="responsive-ul-items primero" href="#episodios">EPISODIOS</a>
+                <a class="responsive-ul-items" href="#nosotros">NOSOTROS</a>
+                <a class="responsive-ul-items" href="#entrevistas">ENTREVISTAS</a>
+                <a class="responsive-ul-items" href="#topicos">TÓPICOS</a>
+            </li>
+        </ul>
+        </div>
     </header>
     <main class="main-container">
         <section class="main-section">
@@ -43,31 +48,31 @@
             <p class="main-subtitle">El portal de podcasts que explora el mundo de la programación y
                 la tecnología. Nuevos epidosios, todos los jueves cada 15 días.
             </p>
-            <a href="" class="button">CONOCÉ MÁS</a>
+            <button class="boton">CONOCÉ MÁS</button>
         </section>
-        <div class="iframe-section-container">
+        <div class="iframe-section-container" id="episodios">
             <section class="iframe-section">
                 <h2 class="iframe-title">
                     Episodios
                 </h2>
                 <div class="iframe-item-container">
                     <iframe class="iframe-item"
-                        src="https://open.spotify.com/embed-podcast/episode/56he3SViDydvmZXLNgvK94" width="100%"
-                        height="232" frameborder="0" allow="encrypted-media"></iframe>
+                        src="https://open.spotify.com/embed-podcast/episode/56he3SViDydvmZXLNgvK94" width="100"
+                        height="232" allow="encrypted-media"></iframe>
                     <iframe class="iframe-item"
-                        src="https://open.spotify.com/embed-podcast/episode/7htr6OAC5zsTwP3hadkMsB" width="100%"
-                        height="232" frameborder="0" allow="encrypted-media"></iframe>
+                        src="https://open.spotify.com/embed-podcast/episode/7htr6OAC5zsTwP3hadkMsB" width="100"
+                        height="232" allow="encrypted-media"></iframe>
                     <iframe class="iframe-item"
-                        src="https://open.spotify.com/embed-podcast/episode/06PbDSy6BzUXe4NiBGrBIg" width="100%"
-                        height="232" frameborder="0" allow="encrypted-media"></iframe>
+                        src="https://open.spotify.com/embed-podcast/episode/06PbDSy6BzUXe4NiBGrBIg" width="100"
+                        height="232" allow="encrypted-media"></iframe>
                     <iframe class="iframe-item"
-                        src="https://open.spotify.com/embed-podcast/episode/08UjcBMT5oJTVnGytrDr5K" width="100%"
-                        height="232" frameborder="0" allow="encrypted-media"></iframe>
+                        src="https://open.spotify.com/embed-podcast/episode/08UjcBMT5oJTVnGytrDr5K" width="100"
+                        height="232" allow="encrypted-media"></iframe>
                 </div>
             </section>
         </div>
-        <section class="donde-container">
-            <img class="donde-img" src="./assets/phone.png" alt="">
+        <section class="donde-container" id="nosotros">
+            <img class="donde-img" src="./assets/phone.png" alt="phone">
             <div class="donde-aside-container">
                 <h2 class="donde-title">De dónde venimos</h2>
                 <p class="donde-p">Our posturings, our imagined self-importance, the delusion that we have some
@@ -76,17 +81,17 @@
                     this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
             </div>
         </section>
-        <section class="inv-container">
+        <section class="inv-container" id="entrevistas">
             <h2 class="inv-title">Invitadas/os estelares</h2>
-            <img src="./assets/grace-hopper.png" alt="" class="inv-items">
-            <img src="./assets/Katie-Bouman.png" alt="" class="inv-items">
-            <img src="./assets/Margaret_Hamilton.png" alt="" class="inv-items">
-            <img src="./assets/An E.R.A.Univac 1103 computer in the 1950s.png" alt="" class="inv-items">
-            <img src="./assets/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png"
-                alt="" class="inv-items">
-            <img src="./assets/susan-kare.png" alt="" class="inv-items">
+            <img src="./assets/001.png" alt="Grace Hopper" class="inv-items">
+            <img src="./assets/002.png" alt="Katie Bouman" class="inv-items">
+            <img src="./assets/003.png" alt="Margaret Hamilton" class="inv-items">
+            <img src="./assets/004.png" alt="Univac 1103" class="inv-items">
+            <img src="./assets/005.png"
+                alt="Computer operators" class="inv-items">
+            <img src="./assets/006.png" alt="Susan Kare" class="inv-items">
         </section>
-        <section class="temas-container">
+        <section class="temas-container" id="topicos">
             <h2 class="temas-title">Algunos de nuestros temas</h2>
             <div class="icon-text-container">
                 <div class="icon-text">
@@ -112,6 +117,18 @@
             <button class="novedades-button">ESCUCHÁ LOS EPISODIOS</button>
         </section>
     </main>
+    <footer class="footer-container">
+        <div class="footer-div-container">
+            <p class="footer-p">© 2019— Hello blue pale dot </p>
+            <div class="footer-icon-container">
+            <a href="https://www.spotify.com/" target="_blank"><i class="fab fa-spotify footer-icon"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram footer-icon"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter footer-icon"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook footer-icon"></i></a>
+            <a href="https://web.telegram.org/" target="_blank"><i class="fab fa-telegram footer-icon"></i></a>
+            </div>
+        </div>
+    </footer>
 
 
 

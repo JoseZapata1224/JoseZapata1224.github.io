@@ -4,21 +4,29 @@
     padding: 0;
 }
 
+.boton:hover {
+    background-image: linear-gradient(to left, #0000FE, #00F0B8 );
+    transition: all 1s;
+}
 header {
     margin: auto;
-    max-width: 100vw;
+    width: 100vw;
     height: 80px;
     display: flex;
 }
 
 .fa-bars {
     display: none;
-    margin-top: -201px;
 }
 
-.menu-ico {
-    position: absolute;
-    margin-top: -500px;
+.list-container-responsive {
+    display: none;
+}
+
+.a-episodios, .a-nosotros{
+    text-decoration: none;
+    color: black;
+
 }
 
 .icono {
@@ -28,22 +36,31 @@ header {
     z-index: 10;
 }
 
+.fa-times {
+    display: none;
+}
+
 .responsive-img {
+    display: none;
+}
+
+
+input {
     display: none;
 }
 
 .nav-container {
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: flex-end;
     }
 
-.list {
+
+.list, .list-container {
     display: flex;
     width: 90%;
     justify-content: flex-end;
     flex-wrap: wrap;
-    
     
 }
 
@@ -55,12 +72,34 @@ header {
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    text-decoration: none;
 }
 
 
+.list-items:visited {
+    color: #060A24;
+}
+
+.list-items:not(:visited) {
+    color: #060A24;
+}
+
+.list-items:hover {
+    color: #00F3BB;
+}
+
+
+
+.list-items:active {
+    color: #060A24;
+    opacity: 56%;
+    text-decoration: line-through;
+
+}
+
     .main-container {
         width: 100vw;
-        height: 38vh;
+        height: auto;
         display: flex;
         flex-wrap: wrap;
     }
@@ -69,6 +108,7 @@ header {
         width: 80vw;
         margin: auto;
         padding: 80px 0px 0px 40px;
+        z-index: 0;
     }
 
     .main-title {
@@ -93,7 +133,7 @@ header {
         text-align: justify;
     }
 
-    .button {
+    .boton {
         display: flex;
         font-family: 'IBM Plex Mono', monospace;
         width: 226px;
@@ -105,13 +145,11 @@ header {
         text-decoration: none;
         color: #060A24;
         font-weight: 500;
-    }
+        border: none;
+        font-size: 16px;
         
-    .button:hover {
-        color: white;
-        background-image: linear-gradient(to right, #00F0B8, #0000FE);
-        transition: all 1s;
     }
+
 
     .iframe-section-container {
         display: flex;
@@ -120,6 +158,7 @@ header {
         width: 100vw;
         clip-path: polygon(0% 12%, 100% 0%, 100% 88%, 0% 100%);
         background-image: linear-gradient(to bottom, #0000FF, #0000A3);
+        z-index: 3;
 
     }
 
@@ -151,7 +190,8 @@ header {
         width: 40vw;
         margin-bottom: 20px;
         margin-right: 20px;
-        
+        border: none;
+        background-color: transparent;
     }
 
     .donde-container {
@@ -166,7 +206,7 @@ header {
         height: 599px;
         width: 400px;
         margin: -150px auto 0px;
-        z-index: 1;
+        z-index: 5;
     }
 
     .donde-aside-container {
@@ -279,14 +319,49 @@ header {
     .novedades-button {
         width: 345px;
         height: 56px;
-        font-size: 18px;
+        font-size: 16px;
         font-family: 'IBM Plex Mono', monospace;
         font-weight: 500;
         color: #060A24;
         background-color: #00F3BB;
         border: none;
+        cursor: pointer;
     }
 
+    .footer-container {
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .footer-div-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .footer-p {
+        color: #060A24;
+        width: 50vw;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 16px;
+    }
+
+    .footer-icon-container {
+        height: 50px;
+        width: 30vw;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+
+    .footer-icon {
+        color: #060A24;
+        font-size: 18px;
+    }
 
 
 
@@ -300,7 +375,7 @@ header {
             transition: all 1s;
         }
 
-        .button {
+        .boton {
             margin-top: 20px;
         }
 
@@ -342,81 +417,141 @@ header {
             font-size: 16px;
         }
 
+        .footer-container {
+            height: auto;
+            padding: 30px;
+            justify-content: center;
+    
+        }
+    
+        .footer-div-container {
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        .footer-p {
+            font-size: 14px;
+            text-align: center;
+        }
+    
+        .footer-icon-container {
+            width: 50vw;
+            height: auto;
+            padding: 20px 0px 0px 0px;
+        }
+    
+        .footer-icon {
+            font-size: 16px;
+        }
+
     }
 
     @media screen and (max-width: 614px) {
+        html {
+            width: 100vw;
+        }
+
         .list {
             display: none;
         }
         
         header {
             width: 100vw;
-            background-color: #0000A3;
+            background-color: white;
         }
     
         .icono {
             margin-left: 30px;
         }
     
-        .fa-bars {
+        .fa-bars, .fa-times{
             display: flex;
             font-size: 25px;
             margin-top: 27.5px;
             margin-right: 35px;
             z-index: 10;
-            color: white;
+            color: black;
         }
     
+
+
         .menu-ico {
             display: flex;
-            padding-right: 40px;
+            width: 100vw;
+            justify-content: flex-end;
             
         }
-    
+
+        input:checked ~ .list-container-responsive {
+            margin-top: 70px;
+            width: 100vw;
+            height: 500px;
+            justify-content: flex-start;
+            align-items: flex-end;
+            text-align: right;
+        }
+
         .responsive-ul {
+            font-family: 'IBM Plex Sans', sans-serif;
+            color: #060A24 ;
+            font-size: 16px;
+        }
+
+        input:checked ~ .responsive-ul {
+            display: flex;
+
+        }
+
+        input:checked ~ label > .fa-bars {
+            display: none;
+        }
+
+        input:not(:checked) ~ label > .fa-times {
+            display: none;
+        }
+
+        input {
+            display: none;
+        }
+
+        .list-container-responsive {
             list-style-type: none;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 20px;
-            height: 270px;
             width: 100vw;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            justify-content: flex-end;
             color: white;
+            padding-left: 0px;
             padding-bottom: 20px;
-            
+            position: absolute;
+            margin-right: 0;
+            margin-top: -500px;
+            background-color: #0000A3;
+            flex-shrink: 1;
+            z-index: 2;
         }
-    
+        
+        
+
         .responsive-ul-items {
             padding: 5px;
             display: flex;
-            align-items: flex-start;
-            padding: 10px 40px 10px 10px;
+            text-decoration: none;
+            color: white;
+            width: 35vw;
+            padding: 25px 0px 10px 15px;
+
+        }
+
+        .primero {
+            margin-top: 30px;
         }
     
-        .fa-bars:hover + .menu-ico {
-            display: flex;
-            margin-top: 0px;
-            justify-content: center;
-            transition: all 1s;
-            height: 1000px;
-            background-image: linear-gradient(to bottom, #010194, #0000A3);
-            
-        }
-    
-        .menu-ico:hover {
-            display: flex;
-            height: 1000px;
-            margin-top: 0px;
-            justify-content: center;
-            background-image: linear-gradient(to bottom, #010194, #0000A3);
-    
-        }
     
         .main-container {
             width: 100vw;
-            height: 80vh;
+            height: auto;
+
         }
     
         .main-section {
@@ -442,7 +577,7 @@ header {
             text-align: justify;
         }
 
-        .button {
+        .boton {
             margin-top: 30px;
             width: 170px;
             height: 42px;
@@ -517,7 +652,7 @@ header {
         
         .main-container {
             width: 100vw;
-            height: 80vh;
+            height: auto;
         }
     
         .main-section {
@@ -544,7 +679,8 @@ header {
 
         }
 
-        .button {
+
+        .boton {
             width: 150px;
             height: 40px;
             font-size: 15px;
